@@ -74,7 +74,7 @@ WHERE Enrollments.StudentID = 1;
 #Python Student Mangment Coding from In-Class and Own Time
 
 
-**conn = sqlite3.connect('student_management.db')
+conn = sqlite3.connect('student_management.db')
 cursor = conn.cursor()
 
 # Create the Students table
@@ -185,4 +185,4 @@ if __name__ == "__main__":
     main()
 
 # Close the connection when done
-conn.close()**
+conn.close()
