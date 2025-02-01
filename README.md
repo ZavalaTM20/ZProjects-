@@ -74,6 +74,7 @@ WHERE Enrollments.StudentID = 1;
 #Python Student Mangment Coding from In-Class and Own Time
 
 
+# Connect to SQLite database (or create it if it doesn't exist)
 conn = sqlite3.connect('student_management.db')
 cursor = conn.cursor()
 
