@@ -73,8 +73,6 @@ WHERE Enrollments.StudentID = 1;
 
 #Python Student Mangment Coding from In-Class and Own Time
 
-
-
 conn = sqlite3.connect('student_management.db')
 cursor = conn.cursor()
 
@@ -91,28 +89,22 @@ cursor.execute('''
 def add_student():
     name = input("Enter student's name: ")
     age = int(input("Enter student's age: "))
-    grade = input("Enter student's grade: ")
-    
-    
+    grade = input("Enter student's grade: ")  
 
 def view_students():
     cursor.execute("SELECT * FROM Students")
-    students = cursor.fetchall()
-    
+    students = cursor.fetchall()  
 
 def update_student():
     student_id = int(input("Enter the student's ID to update: "))
     new_name = input("Enter the new name (leave blank to keep the current name): ")
     new_age = input("Enter the new age (leave blank to keep the current age): ")
     new_grade = input("Enter the new grade (leave blank to keep the current grade): ")
-
    
-
 def delete_student():
     student_id = int(input("Enter the student's ID to delete: "))
     cursor.execute("SELECT * FROM Students WHERE id = ?", (student_id,))
     student = cursor.fetchone()
-
 
 def main():
     while True:
@@ -122,9 +114,6 @@ def main():
         print("3. Update Student")
         print("4. Delete Student")
         print("5. Exit")
-        
-        
-      
 
 if __name__ == "__main__":
     main()
